@@ -8,6 +8,12 @@ gem 'pg', '0.15.1'
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
+  
+  # Spork
+  gem 'spork-rails', '4.0.0'
+  #gem 'guard-spork', '1.5.0' #Known problem with spork+guard
+  gem 'guard-spork', :github => 'guard/guard-spork' #resolution from StackOverflow
+  gem 'childprocess', '0.3.6'
 end
 
 group :test do
@@ -23,7 +29,7 @@ end
 
 # Uncomment these lines on Windows.
 gem 'rb-notifu', '0.0.4'
-#gem 'win32console', '1.3.2' but apparently not this one
+#gem 'win32console', '1.3.2' ...but apparently not this one
 gem 'wdm', '0.1.0'
   
 gem 'sass-rails', '4.0.1'
