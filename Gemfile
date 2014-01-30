@@ -30,7 +30,13 @@ end
 # Uncomment these lines on Windows.
 gem 'rb-notifu', '0.0.4'
 #gem 'win32console', '1.3.2' ...but apparently not this one
-gem 'wdm', '0.1.0'
+
+# tko heroku problem documented at
+# http://stackoverflow.com/questions/15786942/error-when-running-heroku-run-rake-dbmigrate-3
+#WINDOWS Gems That don't play well with nix
+platforms :mswin do 
+  gem 'wdm', '0.1.0'
+end
   
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
