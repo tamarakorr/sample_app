@@ -27,5 +27,9 @@ module SampleApp
     
     # For bootstrap.css:
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    
+    # Get rid of deprecation warning when running spec tests:
+    # "[deprecated] I18n.enforce_available_locales will default to true in the future"
+    I18n.enforce_available_locales = true
   end
 end
